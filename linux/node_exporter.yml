@@ -1,0 +1,5 @@
+---
+- name: node exporter sys265
+  hosts: nodeexporter
+  roles:
+  - cloudalchemy.node_exporter
