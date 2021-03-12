@@ -1,2 +1,2 @@
 # ansible-playbooks
-Collection of playbooks for ansible
+An collection of playbooks for ansible
