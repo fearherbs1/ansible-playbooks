@@ -1,7 +1,7 @@
 # ansible-playbooks  
 An collection of playbooks for ansible  
 
-# Useage taken from my sys-265 tech journal:  
+# Useage Guide:  
 
 
 # Prepare our Hosts and Controller:
