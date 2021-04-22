@@ -1,0 +1,24 @@
+---
+- name: bitwardenrs sys265
+- hosts: servers
+  vars:
+    bitwardenrs_configure: yes
+    bitwardenrs_domain: https://util-group2.group2.local/
+    bitwardenrs_port: "443"
+    bitwardenrs_build_backend: "sqlite,postgresql"
+    admin_token: !vault | 
+      $ANSIBLE_VAULT;1.1;AES256
+      ...
+    bitwardenrs_config:
+      DOMAIN: "https://util-group2.group2.local/"
+      ADMIN_TOKEN: "{{ admin_token }}"
+      DATABASE_URL: "postgresql:///bitwardenrs?host=/run/postgresql/"
+      SIGNUPS_ALLOWED: 'true'
+      SIGNUPS_VERIFY: 'true'
+      SIGNUPS_DOMAINS_WHITELIST: 'example.com'
+      INVITATIONS_ALLOWED: 'true'
+      SMTP_HOST: 'mail.example.com'
+      SMTP_FROM: 'bitwarden@example.com'
+      SMTP_FROM_NAME: 'bitwarden'
+  roles:
+    - dmaes.bitwardenrs
