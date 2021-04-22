@@ -117,7 +117,7 @@ host_key_checking = false
 Using ansible galaxy we can grab images to use with our playbooks.  
 Here is an example of us downloading the node_exporter image to the roles folder:  
 
-`ansible-galaxy install geerlingguy.apache -p roles/`  
+`ansible-galaxy install cloudalchemy.node_exporter -p roles/`  
 
 ## Using Playbooks:
 
